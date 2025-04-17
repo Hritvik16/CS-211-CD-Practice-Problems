@@ -1,0 +1,11 @@
+Objective:
+Create a base class Animal with attributes (like name and age) and a method speak(). Then, derive two classes, Dog and Cat, from Animal that override the speak() method to return a sound specific to each animal.
+
+Requirements:
+
+Classes & Objects: Create an Animal class and instantiate objects from Dog and Cat.
+Methods: Implement a speak() method in each derived class.
+Magic Methods:
+Override the __str__ method to provide a human-readable description of the animal.
+Override the __eq__ method to compare two animal objects (for example, comparing their ages or names).
+Inheritance: Use inheritance so that Dog and Cat reuse attributes and methods from Animal
