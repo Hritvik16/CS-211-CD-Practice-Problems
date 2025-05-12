@@ -1,0 +1,31 @@
+Objective:
+Create a WordList class (subclass of list) and a WordMap class that builds a dictionary mapping the first letter of each word to all words starting with that letter.
+
+Requirements:
+
+Classes & Inheritance:
+- WordList should inherit from the built-in list type and only contain strings.
+
+Methods:
+
+1. WordList:
+    - __init__(self, words: list[str]):
+        Initialize the list, ensuring all items are strings.
+    - __str__(self) -> str:
+        Return the list items joined by a dash ("-").
+
+2. WordMap:
+    - __init__(self, word_list: WordList):
+        Construct a dictionary (self.mapping) that maps the first letter of each word to a list of words starting with that letter.
+
+Example Input:
+wl = WordList(["apple", "banana", "apricot", "blueberry", "cherry"])
+print(wl)
+wm = WordMap(wl)
+print(wm.mapping["a"])
+print(wm.mapping["b"])
+
+Expected Output:
+apple-banana-apricot-blueberry-cherry
+['apple', 'apricot']
+['banana', 'blueberry']

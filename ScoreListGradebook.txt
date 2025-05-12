@@ -1,0 +1,32 @@
+Objective:
+Create a ScoreList class (subclass of list) that supports elementwise multiplication, and a Gradebook class that computes column-wise averages across multiple ScoreLists.
+
+Requirements:
+
+Classes & Inheritance:
+- ScoreList should inherit from list and only store numbers (int or float).
+
+Methods:
+
+1. ScoreList:
+    - __init__(self, scores: list[int | float]):
+        Initialize the list, ensuring all items are numeric.
+    - __mul__(self, other: ScoreList) -> ScoreList:
+        Return a new ScoreList representing elementwise multiplication.
+        Raise a ValueError if the lengths don’t match.
+
+2. Gradebook:
+    - __init__(self, score_lists: list[ScoreList]):
+        Compute the average of each column (i.e., test scores across students).
+        Store the result in self.averages.
+
+Example Input:
+s1 = ScoreList([80, 90, 100])
+s2 = ScoreList([70, 85, 95])
+gb = Gradebook([s1, s2])
+print(gb.averages)
+print(s1 * s2)
+
+Expected Output:
+[75.0, 87.5, 97.5]
+[5600, 7650, 9500]
